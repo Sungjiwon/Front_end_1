@@ -1,35 +1,48 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Titillium+Web&display=swap');
+
 /* 초기화 */
-body, h1, h2, h3, p, ul, figure { margin: 0; padding: 0; }
-li { list-style: none; }
+body, h1, h2, h3, p, ul, figure { margin: 0; padding: 0;}
+li { list-style:  none; }
 a { text-decoration: none; }
 address { font-style: normal; }
 small { font-size: 1em; }
 .hidden { position: absolute; left: -9999px; }
+
 /* 웹폰트 및 공통 */
-body { width: 720px; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif;
-      background: #b8dbf8; }
-h1 { font-family: 'Titillium Web', sans-serif; text-transform: uppercase;  }
-/* 헤더 */
-#header { position: relative; height: 275px; background: url(../images/bg.png) no-repeat; }
-#header .hgroup { position: absolute; bottom: 25px; right: 30px;
-                  color: #fff; }
-#header h1 { }
-#header h2 { }
+body { font-family: 'Noto Sans KR', sans-serif;}
+h1 { font-family: 'Titillium Web', sans-serif; text-transform: uppercase;}
+
+#header { height: 600px; background: url(../images/bg.jpg) no-repeat center / cover;}
+#header .hgroup {padding-top: 200px; text-align: center; color: #fff;}
+/* hgroup 위치 잡는 방법: position absolute 쓰는것과 float: right 써서 아래로 떨어뜨리는 방법 */
+#header h1 {font-size: 60px; }
+#header h2 {font-size: 25px; } 
+
 /* gnb */
-#gnb { height: 60px; }
-#gnb ul li { width: 25%; float: left; }
-#gnb ul li a { display: block; height: 60px; background: #036; color: #fff;
-              text-align: center; line-height: 60px; }
-#gnb ul li a:hover { background: #ffffff; color: #000; font-weight: bold; }
-#gnb ul li.on a { background: #ffffff; color: #000; font-weight: bold; }
+/* #gnb {width: 1000px; height: 60px; margin: -30px auto 0;} */
+/* 2. #gnb {width: 1000px; height: 60px; margin: 0 auto; position: relative; top: -30px;} */
+/* 2. #gnb {width: 1000px; height: 60px; position: absolute; 포지션 앱솔루트와 마진 제로 오토는 함께 사용할 수 없다. */
+#gnb {width: 1000px; height: 60px; position: absolute; top: 570px; left: calc(50% - 500px);}
+#gnb ul {}
+#gnb li { width: 25%; height: 60px; float: left;  color: #fff;} 
+/* width: 25% 그냥 이렇게만 해도 되는 이유가 기준이 position: relative 해서 그런건가? */
+#gnb li a { display: block; height: 60px; background: #036; color: #fff; text-align:center; line-height: 60px;}
+/* a가 영역을 가져야한다면 무조건 display: block; 은 공식처럼 넣어야 함, line-height 도 생략가능함*/
+#gnb ul li a:hover { background: #ffffff; color: #000; font-weight:bold;}
+#gnb ul li.on a { background: #ffffff; color: #000; font-weight:bold;}
+
 /* 메인 */
-#content { padding: 20px 10px; background: #fff; }
-#content article h3 { margin: 20px 0; }
+main { padding-top: 20px; width: 1000px; margin: 0 auto;}  
+#content { padding: 20px 10px; background: #fff;}
+#content h2 { }
+#content article {}
+#content article h3 { margin: 20px 0;}
 #content article figure { margin-left: 40px; }
-#content article figure:nth-of-type(2) { margin-top: 20px; }
-/* footer */
-#footer { padding: 30px 0 10px; background: #030; color: #fff;
-          text-align: center; }
+#content article figure figcaption {}
+/* #content article figure:nth-last-of-type(2) { margin-top: 20px;} */
+
+#footer{ background: #030; color: #fff; text-align: center; padding: 30px 0 10px;}
 #footer p { margin-bottom: 15px; }
+#footer address{}
+#footer small { }
