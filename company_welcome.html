@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>펀웹 인사말</title>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">funweb</a></h1>
+        <nav id="membership">
+          <h2 class="hidden">멤버쉽네비게이션</h2>
+          <ul>
+            <li class="goLogin"><a href="#">login</a></li>
+            <li class="goJoin"><a href="#">Join</a></li>
+          </ul>
+        </nav>
+        <nav id="gnb">
+          <h2 class="hidden">펀웹 주요이용메뉴</h2>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">company</a></li>
+            <li><a href="#">solutions</a></li>
+            <li><a href="#">customer center</a></li>
+            <li><a href="#">contact us</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <section id="container">
+      <!-- 왜 main이 아니라 section인지? @@ -->
+        <header id="subHeader" class="subHeaderCompany">
+            <h2>company</h2>
+        </header>
+        <!-- 왜 header로 묶었는지? @@ -->
+        <div id="subWrap">
+            <nav id="snb">
+                <h3>company <span class="hidden">서브메뉴</span></h3>
+                <!-- span을 쓰는 이유?@@  ->  Company 문구만 표시하고 서브메뉴라는 것은 숨기기 위해서?-->
+                <ul>
+                    <li><a href="#">welcome</a></li>
+                    <li><a href="#">history</a></li>
+                    <li><a href="#">newsroom</a></li>
+                    <li><a href="#">public </a></li>
+                </ul>
+            </nav>
+
+            <article id="subContent">
+                <h3>welcome</h3>
+                <figure>
+                    <img src="http://placehold.it/196x226" alt="">
+                    <figcaption>funweb CEO</figcaption>
+                </figure>
+                <p></p>
+                <p></p>
+                <p></p>
+            </article>
+        </div>
+    </section>
+
+<!-- 내가 구조화해본 것
+      <main>
+          <h1 class="company image">company</h1>
+
+          <nav id="company_menu">
+              <ul>
+                  <li><a href="#">welcome</a></li>
+                  <li><a href="#">history</a></li>
+                  <li><a href="#">newsroom</a></li>
+                  <li><a href="#">public policy</a></li>
+              </ul>
+          </nav>
+
+          <section id="welcome_section">
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+              <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+
+          </section>
+      </main> -->
+
+      <footer id="footer">
+        <div class="info">
+          <small class="copyright">All contents Copyright 2011 FunWeb Inc. all rights reserved</small>
+          <address>Contact mail : funweb@funwebbiz.com Tel: +82 64 123 4315 Fax +82 64 123 4321</address>
+        </div>
+        <ul class="sns">
+          <li class="facebook"><a href="#">페이스북 바로가기</a></li>
+          <li class="twitter"><a href="#">트위터 바로가기</a></li>
+        </ul>
+      </footer>
+</body>
+
+</html>
