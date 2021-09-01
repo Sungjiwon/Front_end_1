@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형이해</title>
+    <style>
+        body { margin: 0; background: beige;}
+        div { width: 1300px; margin: 0 auto; border: 1px solid #000}
+        @media all and (max-width: 1300px) and ( min-width: 621px ){ 
+            body { background: #4152e9;}
+            div { width: 100%; color: #fff; text-align: center; border: 0;}
+            /* width: 100% 주는 이유! */
+            img { border: 10px solid #fff}
+
+        }
+        /* @media all and ( max-width: 620px) { 
+            img { border: 0; width: 90%}
+
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>반응형이란?</h1>
+        <p>각 기기장치에 맞도록 크기가 조절되어지도록 만든 웹 문서</p>
+        <img src="../station.jpg" alt="기차역">
+    </div>
+</body>
+</html>
